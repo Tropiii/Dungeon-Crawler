@@ -1,0 +1,13 @@
+class Mage(Character):
+    def __init__ (self, health = 125, defense = 2.5, weapon = "Staff"):
+        super().__init__(mana = mana,
+                         attack = attack,
+                         defense = defense,
+                         level = level,
+                         experience = experience,
+                         gold = gold)
+    INITIAL_MANA = 100
+    INITIAL_HEALTH = 120
+    statUpPoints  = 0 
+    inTheBattle = False
+    playerClass = "MAGE"
