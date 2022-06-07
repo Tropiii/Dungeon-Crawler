@@ -1,0 +1,11 @@
+class Ranger(Character):
+    def __init__(self, health = 150, defense = 2.5, mana = 30, weapon = "Bow"):
+        super().__init__(attack = attack,
+                         level = level,
+                         experience = experience,
+                         gold = gold)
+    INITIAL_MANA = 30
+    INITIAL_HEALTH = 150
+    stat_up_points = 0 
+    in_the_battle = False
+    player_class = "RANGER"
