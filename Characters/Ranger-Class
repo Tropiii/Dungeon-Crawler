@@ -1,3 +1,5 @@
+rangerinfo = [150, 3, 50]
+
 class Ranger(Character):
     def __init__(self, health = 150, defense = 2.5, mana = 30, weapon = "Bow"):
         super().__init__(attack = attack,

@@ -1,0 +1,16 @@
+
+knightinfo = [175, 4, 25]
+
+
+
+class Knight(Character):
+    def __init__ (self, health = 175, defense = 4, mana = 15, weapon = "Sword"):
+        super().__init__(level = level,
+                         experience = experience,
+                         gold = gold,
+                         attack = attack)
+    INITITAL_MANA = 50
+    INITITAL_HEALTH = 175
+    statUpPoints  = 0 
+    inTheBattle = False
+    playerClass = "KNIGHT"

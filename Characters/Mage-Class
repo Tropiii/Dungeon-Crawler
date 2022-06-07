@@ -1,3 +1,7 @@
+
+mageinfo = [125, 2, 100]
+
+
 class Mage(Character):
     def __init__ (self, health = 125, defense = 2.5, weapon = "Staff"):
         super().__init__(mana = mana,
@@ -11,3 +15,4 @@ class Mage(Character):
     statUpPoints  = 0 
     inTheBattle = False
     playerClass = "MAGE"
+
