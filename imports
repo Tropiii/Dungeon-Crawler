@@ -1,0 +1,10 @@
+import random
+import os
+import time
+
+class clearScreen():
+    def clearTheScreen():
+        try:
+            os.system('cls||clear')
+        except:
+            pass
