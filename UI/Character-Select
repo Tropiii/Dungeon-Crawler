@@ -1,0 +1,23 @@
+while True:
+    print("\n1: Ranger - Health:",rangerinfo[0],"Defense:",rangerinfo[1],"Mana:",rangerinfo[2])
+    print("2: Mage - Health:",mageinfo[0],"Defense:",mageinfo[1],"Mana:",mageinfo[2])
+    print("3: Knight - Health:",knightinfo[0],"Defense:",knightinfo[1],"Mana:",knightinfo[2])
+    player_class = input("Select your Class... 1, 2, or 3? ")
+    if player_class == "1":
+        print("A nimble Ranger, a perfect balance of stealth and power.")
+        break
+    if player_class == "2":
+        print("Seeking power through knowledge I see?")
+        break
+    if player_class == "3":
+        print("A noble Knight, Seeking a grand adventure perhaps?")
+        break
+    if player_class == "Fleur":
+        print("Ahh, The Jackalope? I've heard rumors of their art...")
+    if player_class == "Bitch":
+        print("Well I never...")
+    if player_class == "Hana":
+        print("Holy shit, its Hana")
+    else:
+        print("Please select a valid Class...")
+        continue
