@@ -14,6 +14,7 @@ player_inventory = [0, 3, 2, 1]
 small_potions = player_inventory[1]
 medium_potions = player_inventory[2]
 large_potions = player_inventory[3]
+gold = []
 player_name = input("The Dungeon awaits Adventurer, What is your name? ? ?")
 if player_name == "Fleur":
     print("I've heard this name before...")
@@ -141,10 +142,11 @@ def prompt_for_YorN(prompt: valid_YorN):
     if choice in valid_YorN:
       return choice
     print("not a valid choice...try again!")
-    
-def Roll_D20():
-    print(random.randint(1,20))
-    return
+
+roll = random.randint(1,20)
+def D20(roll):
+    return roll
+
 
 print("You reassure yourself and press on.")
 choice = prompt_for_input("The inside of the Crypt is cold and dark, three paths lay ahead of you... Which Direction will you go?? straight, Back, Left or Right?")
@@ -195,14 +197,16 @@ if choice == "left":
     choice = prompt_for_YorN("Continue to Explore?")
     if choice == "no":
         print("You ignore the room for now, continuing down the hallway you reach the end, to your left is a big pile of debris, obviously from a cave-in of some sort..")
-        choice = prompt_for_input("Which Direction will you go? STRAIGHT up the hallway you just enetered... Or BACK the way you came? ")
-        if choice == "straight":
+        choice = prompt_for_input("Which Direction will you go? UP the hallway you just enetered... Or BACK the way you came? ")
+        if choice == "up":
             print("You head through the long hallway, paying close attention to noises you hear in the various cracks in the walls and floors below.the light seems to fade the further down the hallway you venture.")
         if choice == "back":
             print("You choose to head back the way you came and regroup.")
     if choice == "yes":
         print("You begin to rummage through the drawers that are still left unscatched. you find 50 Gold!!")
-        print("You now have {gold} gold!".format(gold = 50).append(player_inventory))
+        print("You now have {gold} gold!".format(gold = 50))
+        player_inventory.append(gold)
+        print("You smile a bit as the gold weighs in your satchel and press on...")
     if choice == "no":
         print("You ignore the room and continue moving foward")
 
@@ -218,12 +222,14 @@ if choice == "right":
         print("You decide to go left, as you go steadily down the hallway, you hear faint clinking, almost like bottles tapping together. You can see the light coming through a broken hole in the wall, as you approach your foot snags on a tripwire!!")
         print("Roll to see if you can stop the trap in time")
         choice = input("press ENTER to roll")
-        D20 = Roll_D20()
-        
-        if Roll_D20 != 13:
-            print("You react quickly, grabbing the rope before it dropped the rocks")
+        print(roll)
+        if roll > 13:
+                print("You react quickly, grabbing the rope before it dropped the rocks")
+                print("good job")
         else:
-            print("The trap triggers and a bucket of rocks falls from above, alerting the enemy mage who gets the first blow.")
+            if roll < 13:
+                print("The trap triggers and a bucket of rocks falls from above, alerting the enemy mage who gets the first blow.")
+                print("time to fight")
         
         choice = prompt_for_YorN("Continue foward??")
         if choice == "yes":
