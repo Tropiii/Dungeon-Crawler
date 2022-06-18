@@ -1,6 +1,7 @@
 import random
 import os
 import time
+import pyfiglet
 valid_choices = ["left", "right", "straight", "back"]
 valid_YorN = ["yes", "no"]
 class clearScreen():
@@ -123,6 +124,9 @@ print("\nW A N T E D")
 print(randombosses)
 print("B O U N T Y")
 print(random.randint(0,10000))
+
+ascii_banner = pyfiglet.figlet_format("The Adventure Begins")
+print(ascii_banner)
 
 def prompt_for_input(prompt: valid_choices):
   while True:
