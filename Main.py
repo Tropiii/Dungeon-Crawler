@@ -2,6 +2,9 @@ import random
 import os
 import time
 import pyfiglet
+from colorama import init
+from termcolor import colored
+from colorama import Fore, Back, Style 
 valid_choices = ["left", "right", "straight", "back"]
 valid_YorN = ["yes", "no"]
 class clearScreen():
@@ -116,18 +119,24 @@ while True:
     else:
         print("Please select a valid Class...")
         continue
-    
+
 boss = ["Narfi, The Betrayer King", "Tormod, The Desecrator", "Muxus, Goblin Grandee"] 
 randombosses = random.choice(boss)    
 player_heal_max = player_class[0]        
 print("You step to the entrance of the Dungeon, looking down to your hand you re-read the notice the guard handed you..")
-print("\nW A N T E D") 
+
+print(Fore.RED + "\nW A N T E D")
 print(randombosses)
-print("B O U N T Y")
+print(Style.RESET_ALL)
+
+print(Fore.LIGHTYELLOW_EX + "B O U N T Y")
 print(random.randint(0,10000))
+print(Style.RESET_ALL)
 
 ascii_banner = pyfiglet.figlet_format("The Adventure Begins")
-print(ascii_banner)
+init(autoreset=True)
+print(Fore.LIGHTBLUE_EX + ascii_banner)
+
 
 def prompt_for_input(prompt: valid_choices):
   while True:
@@ -146,6 +155,7 @@ def prompt_for_YorN(prompt: valid_YorN):
 roll = random.randint(1,20)
 def D20(roll):
     return roll
+
 
 
 print("You reassure yourself and press on.")
